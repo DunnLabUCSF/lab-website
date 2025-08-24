@@ -95,9 +95,15 @@
   transform: translateY(-10px);
 }
 
-.research-card:nth-child(1) { background: var(--glass-violet); }
-.research-card:nth-child(2) { background: var(--glass-cyan); }
-.research-card:nth-child(3) { background: var(--glass-green); }
+.research-card:nth-child(1) {
+  background: var(--glass-violet);
+}
+.research-card:nth-child(2) {
+  background: var(--glass-cyan);
+}
+.research-card:nth-child(3) {
+  background: var(--glass-green);
+}
 
 .research-icon {
   font-size: var(--fs-4xl);

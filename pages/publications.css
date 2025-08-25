@@ -1,0 +1,40 @@
+.publications-section {
+    background: linear-gradient(135deg, #6b46c1, #805ad5);
+    color: white;
+    padding: 4rem 0;
+}
+
+.publication-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.publication-card:hover {
+    transform: translateY(-2px);
+}
+
+.year-section {
+    margin-bottom: 3rem;
+}
+
+.year-heading {
+    color: #e9d8fd;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.authors {
+    color: #e9d8fd;
+    font-style: italic;
+    margin: 0.5rem 0;
+}
+
+.journal {
+    color: #d6bcfa;
+    margin-top: 0.5rem;
+}

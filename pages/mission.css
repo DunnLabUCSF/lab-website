@@ -30,15 +30,18 @@ header h1 {
 
 nav {
     margin-bottom: var(--space-sm);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
 }
 
 nav a {
     color: var(--white);
     text-decoration: none;
-    margin-right: var(--space-lg);
     font-weight: 500;
     transition: all 0.3s ease;
     position: relative;
+    padding: var(--space-xs) var(--space-sm);
 }
 
 nav a:hover {

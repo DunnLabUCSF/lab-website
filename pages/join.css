@@ -1,0 +1,194 @@
+/* Join page specific styles */
+
+.hero-section {
+    background: linear-gradient(135deg, #2E3192 0%, #1BFFFF 100%);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    position: relative;
+    z-index: 2;
+}
+
+.join-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.gallery-item {
+    flex: 1 1 280px;
+    max-width: 320px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.highlight-item img {
+    border: 2px solid #4299E1;
+    position: relative;
+}
+
+.highlight-item img:hover {
+    border-color: #2B6CB0;
+}
+
+.highlight-item .caption {
+    color: #2B6CB0;
+    font-weight: 600;
+}
+
+.caption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #4A5568;
+    font-weight: 500;
+}
+
+.international-benefits {
+    margin: 2rem 0 1.5rem 1.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.international-benefits li {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.4;
+    background: linear-gradient(45deg, #f6f8ff, #ffffff);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.international-benefits li:hover {
+    transform: translateX(5px);
+}
+
+.international-quote {
+    margin: 1.5rem 0 1rem 0;
+    font-style: italic;
+    color: #2D3748;
+    background: linear-gradient(135deg, #E2E8F0 0%, #EDF2F7 100%);
+    border-left: 4px solid #4299E1;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.quote-author {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.glass-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8));
+    backdrop-filter: blur(10px);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 
+        0 4px 20px rgba(0, 0, 0, 0.08),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mb-xl {
+    margin-bottom: 2rem;
+}
+
+.mt-xl {
+    margin-top: 2rem;
+}
+
+.py-4xl {
+    padding: 2.5rem 0;
+}
+
+.gap-lg {
+    gap: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1.25rem;
+    }
+    
+    .gallery-item {
+        max-width: 100%;
+    }
+    
+    .flex {
+        flex-direction: column;
+    }
+    
+    .gap-lg {
+        gap: 1rem;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.join-gallery {
+    max-width: 1000px;
+    margin: 0 auto;
+}

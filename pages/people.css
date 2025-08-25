@@ -22,12 +22,37 @@
 }
 
 .people-header {
-    background: #ff69b4; /* Bright pink header as requested */
+    background: linear-gradient(
+        45deg,
+        #ff69b4,
+        #ff9cd4,
+        #ffb6e6,
+        #ffd1f5,
+        #e8b8ff,
+        #c9a0ff,
+        #ad8bff,
+        #8f77ff
+    );
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
     color: white;
     padding: 4rem 0;
     text-align: center;
     position: relative;
     overflow: hidden;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .team-section {

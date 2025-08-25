@@ -1,10 +1,33 @@
 /* People Page Styles */
 
+@keyframes sparkle {
+    0% { opacity: 0.5; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.1); }
+    100% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.sparkles {
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    animation: sparkle 2s infinite;
+    padding: 1rem;
+}
+
+.top-sparkles {
+    margin-bottom: 1rem;
+}
+
+.bottom-sparkles {
+    margin-top: 1rem;
+}
+
 .people-header {
     background: #ff69b4; /* Bright pink header as requested */
     color: white;
     padding: 4rem 0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .team-section {
@@ -20,6 +43,13 @@
     color: var(--deep-navy);
     border-bottom: 2px solid var(--light-gray);
     padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.team-category h2 span {
+    animation: sparkle 2s infinite;
 }
 
 .team-member {

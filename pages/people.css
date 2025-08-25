@@ -81,10 +81,35 @@
     display: flex;
     gap: 2rem;
     margin-bottom: 3rem;
-    background: var(--glass-white);
+    background: linear-gradient(
+        45deg,
+        rgba(255, 248, 255, 0.9),
+        rgba(255, 240, 248, 0.9),
+        rgba(248, 240, 255, 0.9),
+        rgba(240, 248, 255, 0.9),
+        rgba(240, 255, 248, 0.9),
+        rgba(248, 255, 240, 0.9)
+    );
+    background-size: 400% 400%;
+    animation: cardGradient 20s ease infinite;
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@keyframes cardGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .member-photo {

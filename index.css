@@ -97,6 +97,11 @@
   animation: bannerTextFloat 2s ease-in-out infinite;
 }
 
+.username-text {
+  color: var(--cyan);
+  font-weight: 700;
+}
+
 /* Add top padding to body to account for fixed banner */
 body {
   padding-top: 60px;

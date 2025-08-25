@@ -54,7 +54,7 @@
     <div class="welcome-banner">
       <div class="container text-center">
         <h3 id="welcome-message" class="welcome-banner-text">
-          Hi there <span class="rainbow-text">your-username</span>! 👋
+          Hi there <span class="username-text">your-username</span>! 👋
         </h3>
       </div>
     </div>
@@ -294,7 +294,7 @@
           const username = config["user-name"] || "visitor";
           const welcomeMessage = document.getElementById("welcome-message");
           if (welcomeMessage) {
-            welcomeMessage.innerHTML = `Hi there <span class="rainbow-text">${username}</span>! 👋`;
+            welcomeMessage.innerHTML = `Hi there <span class="username-text">${username}</span>! 👋`;
           }
         })
         .catch((error) => {

@@ -83,21 +83,22 @@
     margin-bottom: 3rem;
     background: linear-gradient(
         45deg,
-        rgba(255, 248, 255, 0.9),
-        rgba(255, 240, 248, 0.9),
-        rgba(248, 240, 255, 0.9),
-        rgba(240, 248, 255, 0.9),
-        rgba(240, 255, 248, 0.9),
-        rgba(248, 255, 240, 0.9)
+        rgba(67, 67, 157, 0.95),
+        rgba(87, 67, 157, 0.95),
+        rgba(107, 67, 157, 0.95),
+        rgba(127, 67, 157, 0.95),
+        rgba(147, 67, 157, 0.95),
+        rgba(157, 67, 147, 0.95)
     );
     background-size: 400% 400%;
     animation: cardGradient 20s ease infinite;
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.25);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.18);
+    color: white;
 }
 
 @keyframes cardGradient {
@@ -136,14 +137,14 @@
 }
 
 .member-title {
-    color: var(--gray);
+    color: rgba(255, 255, 255, 0.85);
     margin-bottom: 1rem;
     font-style: italic;
 }
 
 .member-bio {
     line-height: 1.6;
-    color: var(--deep-navy);
+    color: rgba(255, 255, 255, 0.95);
 }
 
 /* Rainbow colors for names */

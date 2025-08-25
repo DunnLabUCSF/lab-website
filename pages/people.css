@@ -43,6 +43,20 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.people-header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.people-header h1:hover {
+    transform: scale(1.15);
+}
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;

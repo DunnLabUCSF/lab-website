@@ -72,6 +72,41 @@
   align-items: center;
 }
 
+/* ===== WELCOME BANNER ===== */
+.welcome-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--glass-green);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: var(--space-sm) 0;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  animation: bannerSlideDown 1s ease-out, bannerGlow 3s ease-in-out infinite;
+  transform-origin: top;
+}
+
+.welcome-banner-text {
+  font-size: var(--fs-lg);
+  margin: 0;
+  color: var(--white);
+  font-weight: 600;
+  animation: bannerTextFloat 2s ease-in-out infinite;
+}
+
+/* Add top padding to body to account for fixed banner */
+body {
+  padding-top: 60px;
+}
+
+/* Adjust navigation position */
+.glass-nav {
+  top: calc(60px + var(--space-lg));
+}
+
 /* ===== RESEARCH SECTION ===== */
 .research-section {
   background: rgba(255, 255, 255, 0.05);

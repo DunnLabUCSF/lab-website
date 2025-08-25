@@ -50,6 +50,15 @@
       </div>
     </nav>
 
+    <!-- Welcome Banner -->
+    <div class="welcome-banner">
+      <div class="container text-center">
+        <h3 id="welcome-message" class="welcome-banner-text">
+          Hi there <span class="rainbow-text">your-username</span>! 👋
+        </h3>
+      </div>
+    </div>
+
     <!-- Hero Section -->
     <section id="home" class="hero">
       <div class="container">
@@ -276,5 +285,22 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      // Load username from config.json and update welcome message
+      fetch("config.json")
+        .then((response) => response.json())
+        .then((config) => {
+          const username = config["user-name"] || "visitor";
+          const welcomeMessage = document.getElementById("welcome-message");
+          if (welcomeMessage) {
+            welcomeMessage.innerHTML = `Hi there <span class="rainbow-text">${username}</span>! 👋`;
+          }
+        })
+        .catch((error) => {
+          console.log("Could not load config.json:", error);
+          // Keep default message if config.json fails to load
+        });
+    </script>
   </body>
 </html>

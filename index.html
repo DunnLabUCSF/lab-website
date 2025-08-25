@@ -50,15 +50,6 @@
       </div>
     </nav>
 
-    <!-- Welcome Banner -->
-    <div class="welcome-banner">
-      <div class="container text-center">
-        <h3 id="welcome-message" class="welcome-banner-text">
-          Hi there <span class="username-text">your-username</span>! 👋
-        </h3>
-      </div>
-    </div>
-
     <!-- Hero Section -->
     <section id="home" class="hero">
       <div class="container">
@@ -287,20 +278,39 @@
     </footer>
 
     <script>
-      // Load username from config.json and update welcome message
-      fetch("config.json")
-        .then((response) => response.json())
-        .then((config) => {
-          const username = config["user-name"] || "visitor";
-          const welcomeMessage = document.getElementById("welcome-message");
-          if (welcomeMessage) {
-            welcomeMessage.innerHTML = `Hi there <span class="username-text">${username}</span>! 👋`;
-          }
-        })
-        .catch((error) => {
-          console.log("Could not load config.json:", error);
-          // Keep default message if config.json fails to load
-        });
+      // Wait for DOM to be fully loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        // Load username from config.json and update welcome message
+        fetch("config.json")
+          .then((response) => {
+            console.log("Config fetch response:", response);
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+          })
+          .then((config) => {
+            console.log("Config data:", config);
+            const username = config["user-name"] || "visitor";
+            console.log("Username:", username);
+            const welcomeMessage = document.getElementById("welcome-message");
+            if (welcomeMessage) {
+              welcomeMessage.innerHTML = `Hi there <span class="username-text">${username}</span>! 👋`;
+              console.log("Welcome message updated");
+            } else {
+              console.log("Welcome message element not found");
+            }
+          })
+          .catch((error) => {
+            console.log("Could not load config.json:", error);
+            // Fallback: try to read from a fallback method or keep default
+            const welcomeMessage = document.getElementById("welcome-message");
+            if (welcomeMessage) {
+              // Update with fallback if config fails
+              welcomeMessage.innerHTML = `Hi there <span class="username-text">visitor</span>! 👋`;
+            }
+          });
+      });
     </script>
   </body>
 </html>
